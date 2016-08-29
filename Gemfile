@@ -6,6 +6,8 @@ gem 'sprockets', '2.11.0'
 gem 'sass-rails'
 
 
+
+
 # Add rails 12factor
 gem 'rails_12factor', group: :production
 
