@@ -8,6 +8,10 @@ gem 'sass-rails'
 #Use carrierwave for photo uploading
 gem 'carrierwave'
 
+#use simple form for adding content
+gem 'simple_form'
+
+
 
 # Add rails 12factor
 gem 'rails_12factor', group: :production
