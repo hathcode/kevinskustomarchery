@@ -11,7 +11,8 @@ gem 'carrierwave'
 #use simple form for adding content
 gem 'simple_form'
 
-
+#Use devise for user auth
+gem 'devise', '>=3.2.4'
 
 # Add rails 12factor
 gem 'rails_12factor', group: :production
