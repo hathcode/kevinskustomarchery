@@ -3,7 +3,7 @@ class CreateBows < ActiveRecord::Migration
     create_table :bows do |t|
       t.string :name
       t.text :description
-      
+
       t.timestamps
     end
   end
