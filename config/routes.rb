@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'static_pages#index'
-
+  namespace :administrator do
+    resources :bows do
+      resources :photos
+    end
+  end
   resources :bows do
-    resources :photos, only: :create
+    resources :photos, only: [:show]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
