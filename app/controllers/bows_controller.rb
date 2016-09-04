@@ -6,6 +6,7 @@ class BowsController < ApplicationController
 
   def show
     @bow = Bow.find(params[:id])
+    @photo = Photo.new
   end
 
  

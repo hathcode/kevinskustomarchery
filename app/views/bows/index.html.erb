@@ -1,11 +1,11 @@
-<h1>bows will show here</h1>
-
+<html>
 <% @bows.each do |bow| %>
-  <% link_to bow.name, bow_path(bow) %>
   <div class="booyah-box col-xs-2 col-xs-offset-1">
     <i><%= link_to bow.name, bow_path(bow) %></i><br />
     <p><%= bow.description %></p><br />
-    <i><%# =image_tag(bow.photos.first.picture, :class => "img-responsive") %></i>
+    <%=  image_tag bow.photos.first.picture, class: "img-responsive img-thumbnail" %>
+    <%= bow.photos.first.caption %>
   </div>
 <% end %>
 
+</html>

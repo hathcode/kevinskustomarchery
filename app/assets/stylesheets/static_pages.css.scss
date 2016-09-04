@@ -1,3 +1,55 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+html { 
+  background: url(image_08.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.myButton {
+  -moz-box-shadow:inset 50px 1px 23px -50px #91b8b3;
+  -webkit-box-shadow:inset 50px 1px 23px -50px #91b8b3;
+  box-shadow:inset 50px 1px 23px -50px #91b8b3;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #162420), color-stop(1, #737a7a));
+  background:-moz-linear-gradient(top, #162420 5%, #737a7a 100%);
+  background:-webkit-linear-gradient(top, #162420 5%, #737a7a 100%);
+  background:-o-linear-gradient(top, #162420 5%, #737a7a 100%);
+  background:-ms-linear-gradient(top, #162420 5%, #737a7a 100%);
+  background:linear-gradient(to bottom, #162420 5%, #737a7a 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#162420', endColorstr='#737a7a',GradientType=0);
+  background-color:#162420;
+  -moz-border-radius:18px;
+  -webkit-border-radius:18px;
+  border-radius:18px;
+  border:1px solid #566963;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font: 400 20px/0.8 'Great Vibes', Helvetica, sans-serif;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+  font-weight: 75;
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+  padding:11px 23px;
+  text-decoration:none;
+}
+
+.myButton:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #737a7a), color-stop(1, #162420));
+  background:-moz-linear-gradient(top, #737a7a 5%, #162420 100%);
+  background:-webkit-linear-gradient(top, #737a7a 5%, #162420 100%);
+  background:-o-linear-gradient(top, #737a7a 5%, #162420 100%);
+  background:-ms-linear-gradient(top, #737a7a 5%, #162420 100%);
+  background:linear-gradient(to bottom, #737a7a 5%, #162420 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#737a7a', endColorstr='#162420',GradientType=0);
+  background-color:#737a7a;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
