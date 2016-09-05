@@ -4,8 +4,10 @@
   <div class="booyah-box col-xs-2 col-xs-offset-1">
     <i><%= link_to bow.name, administrator_bow_path(bow) %></i><br />
     <p><%= bow.description %></p><br />
-    <%=  image_tag bow.photos.first.picture, class: "img-responsive img-thumbnail" %>
-    <%= bow.photos.first.caption %>
+    <% if bow.photos.present? %>
+      <%= image_tag bow.photos.first.picture, class: "img-responsive img-thumbnail" %>
+      <%= bow.photos.first.caption %>
+    <% end %>
   </div>
 <% end %>
 
