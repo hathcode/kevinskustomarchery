@@ -22,6 +22,8 @@ module Kevinskustomarchery
     #Add fonts path
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
 
+    config.paths['app/views'] << "app/views/devise"
+
     # Precompile additional assets
     config.assets.precompile += %w( .svg .eot .woff .ttf .woff2)
   end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations", sessions: "sessions" }
   root 'static_pages#index'
   namespace :administrator do
     resources :bows do
