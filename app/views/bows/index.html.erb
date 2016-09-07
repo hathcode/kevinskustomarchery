@@ -1,13 +1,23 @@
 <html>
-<% @bows.each do |bow| %>
-  <div class="booyah-box col-xs-2 col-xs-offset-1">
-    <i><%= link_to bow.name, bow_path(bow) %></i><br />
-    <p><%= bow.description %></p><br />
-    <% if bow.photos.present? %>
-      <%= image_tag bow.photos.first.picture, class: "img-responsive img-thumbnail" %>
-      <%= bow.photos.first.caption %>
-    <% end %>
-  </div>
-<% end %>
-
+<style>
+  body  { 
+    background: url(../assets/bows_background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+</style>
+<body>
+  <% @bows.each do |bow| %>
+    <div class="booyah-box col-xs-2 col-xs-offset-1">
+      <i><%= link_to bow.name, bow_path(bow) %></i><br />
+      <p><%= bow.description %></p><br />
+      <% if bow.photos.present? %>
+        <%= image_tag bow.photos.first.picture, class: "img-responsive img-thumbnail" %>
+        <%= bow.photos.first.caption %>
+      <% end %>
+    </div>
+  <% end %>
+</body>
 </html>

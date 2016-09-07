@@ -1,9 +1,22 @@
-<div class= "booyah-box  col-xs-12">
-  <h1><%= @bow.name %></h1><br />
-  <p><%= @bow.description %></p><br />
+<html>
+<style>
+  body  { 
+    background: url(../assets/bows_background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+</style>
+<body>
+  <div class= "booyah-box  col-xs-12">
+    <h1><%= @bow.name %></h1><br />
+    <p><%= @bow.description %></p><br />
 
-<% @bow.photos.each do |photo| %>
-  <%= image_tag photo.picture, class: "img-responsive" %>
-  <%= photo.caption %>
-<% end %>
-</div>
+  <% @bow.photos.each do |photo| %>
+    <%= image_tag photo.picture, class: "img-responsive" %>
+    <%= photo.caption %>
+  <% end %>
+  </div>
+</body>
+</html>
