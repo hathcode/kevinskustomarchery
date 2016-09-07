@@ -14,7 +14,6 @@
       <p><%= bow.description %></p>
       <% if bow.photos.present? %>
         <%= image_tag bow.photos.first.picture, class: "img-responsive img-thumbnail" %>
-        <%= bow.photos.first.caption %>
       <% end %>
     </div>
   <% end %>
