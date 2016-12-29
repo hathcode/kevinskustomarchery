@@ -9,11 +9,11 @@
 </style>
 <body>
   <% @bows.each do |bow| %>
-    <div class="booyah-box col-xs-10 col-xs-offset-1" >
+    <div class="booyah-box-2 col-xs-10 col-xs-offset-1" >
       <i><%= link_to bow.name, bow_path(bow) %></i>
       <p><%= bow.description %></p>
       <% if bow.photos.present? %>
-        <%= image_tag bow.photos.first.picture, class: "img-responsive img-thumbnail" %>
+        <%= image_tag bow.photos.first.picture, class: "img-responsive img-thumbnail pull-right" %>
       <% end %>
     </div>
   <% end %>
