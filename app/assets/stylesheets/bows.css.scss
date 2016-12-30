@@ -9,9 +9,17 @@
   float: right;
 }
 
-.booyah-box-1 p, i {
-  float: left;
-  max-width: 400px;
+@media only screen and (max-width: 425px) {
+
+  .booyah-box-1 p, i {
+    float: left;
+  }
 }
 
+@media only screen and (min-width: 425px) {
 
+  .booyah-box-1 p, i {
+    float: left;
+    max-width: 50%;
+  }
+}
