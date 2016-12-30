@@ -9,10 +9,16 @@
   float: right;
 }
 
+.booyah-box-1 a, a:link, a:visited {
+  color: black;
+}
+
+
 @media only screen and (max-width: 425px) {
 
   .booyah-box-1 p, i {
     float: left;
+    text-decoration: none;
   }
 }
 
@@ -21,5 +27,6 @@
   .booyah-box-1 p, i {
     float: left;
     max-width: 50%;
-  }
+    text-decoration: none;
+ }
 }
