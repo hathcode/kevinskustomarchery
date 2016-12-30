@@ -4,14 +4,13 @@
 
 
 
-.booyah-box-2 .img-thumbnail {
+.booyah-box-1 .img-thumbnail {
   height: 100px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  float: right;
 }
 
-.booyah-box-2 p {
-  width: 50%;
+.booyah-box-1 p, i {
+  float: left;
 }
+
 
