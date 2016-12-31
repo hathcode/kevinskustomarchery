@@ -1,0 +1,10 @@
+<div class= "booyah-box-2 col-xs-10 col-xs-offset-1">
+    <h1>Edit Bow Details</h1>
+    <%= simple_form_for @bow, url: administrator_bow_path do |f| %>
+          <%= f.input :name %>
+          <%= f.input :description %>      
+          <br />
+          <%= f.submit 'Update', class: 'btn btn-primary' %>
+          <%= link_to 'Destroy', administrator_bow_path(@bow), method: :delete,  data: {confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger' %>
+    <% end %>
+</div>
