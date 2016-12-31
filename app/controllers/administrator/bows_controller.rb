@@ -1,6 +1,6 @@
 class Administrator::BowsController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_authorized, only: [:create, :edit, :destroy, :update]
+  before_action :require_authorized
 
   def index
     @bows = Bow.all
