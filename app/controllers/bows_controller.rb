@@ -9,6 +9,13 @@ class BowsController < ApplicationController
     @photo = Photo.new
   end
 
+
+  def info
+  end
+
+  def contact
+  end
+
  
   private
 

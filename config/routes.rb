@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations", sessions: "sessions" }
   root 'static_pages#index'
+  controller :bows do
+    get :info
+    get :contact
+  end
   namespace :administrator do
     resources :bows do
       resources :photos
