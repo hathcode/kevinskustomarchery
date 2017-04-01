@@ -37,10 +37,15 @@ h1, h2, h3, h4, h5, h6 {
 .frosty {
     background:rgba(0,0,0, 0.5);
     color:white;
-    position: absolute;
-    margin-top: 250px;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
     border-radius: 50%;
 
+}
+
+#enter {
+  top: 25%;
 }
 
 .frosty h1 {

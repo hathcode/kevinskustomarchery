@@ -1,4 +1,22 @@
+<!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Striped</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'https://js.stripe.com/v2/' %>
+
+  <%= csrf_meta_tags %>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 <style>
   body  { background: url(../assets/bows_background2.jpg) no-repeat center center fixed;
     min-height: 750px ;
@@ -8,18 +26,39 @@
     background-size: cover;
   }
 </style>
+</head>
 <body>
-  <% @bows.each do |bow| %>
-    <%= link_to bow_path(bow)  do %>
-      <div class="booyah-box-1 col-xs-10 col-xs-offset-1" >
-        <i><%= bow.name %></i>
-        </br>
-        <p><%= bow.description %></p>
-        <% if bow.photos.present? %>
-          <%= image_tag bow.photos.first.picture, class: "img-thumbnail" %>
+
+<div class="container">
+  <div class= "row">
+  <br/>
+<br/>
+    <div class="frosty col-lg-8 col-lg-offset-2 text-center" style="position:relative;" >
+      <br/>
+      <h1>Featured Bows</h1>
+      <br/>
+    </div>
+    <div>
+      <% @bows.each do |bow| %>
+        <%= link_to bow_path(bow)  do %>
+          <div class="booyah-box-1 col-lg-3 col-sm-4 col-xs-10 col-xs-offset-1">
+            <i><%= bow.name %></i>
+            <% if bow.photos.present? %>
+              <%= image_tag bow.photos.first.picture, class: "img-thumbnail" %>
+            <% end %>
+          </div>
         <% end %>
-      </div>
-    <% end %>
-  <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="frosty col-lg-8 col-lg-offset-2 text-center" style="position:relative;">
+      <br/>
+      <h1>Other Bow Shots</h1>
+      <br/>
+    </div>  
+  </div>
+</div>
 </body>
 </html>
