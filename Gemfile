@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#Use stripe for checkout and payment processing
+gem 'stripe'
+
 #Use twitter bootstrap for styles
 gem 'bootstrap-sass', '~>3.3.5.1'
 gem 'sprockets', '2.11.0'

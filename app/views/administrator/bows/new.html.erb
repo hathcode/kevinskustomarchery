@@ -3,6 +3,7 @@
     <%= simple_form_for @bow, url: administrator_bows_path do |f| %>
           <%= f.input :name %>
           <%= f.input :description %>
+          <%= f.input :price %>
           <br />
           <%= f.submit 'Create', class: 'btn btn-primary' %>
     <% end %>
