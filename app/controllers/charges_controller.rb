@@ -5,17 +5,17 @@ end
 
 def create
   # Amount in cents
-  @amount = 500
+  @amount = 10000
 
   customer = Stripe::Customer.create(
-    :email => params[:stripeEmail],
+    :email => current_user.email,
     :source  => params[:stripeToken]
   )
 
   charge = Stripe::Charge.create(
     :customer    => customer.id,
     :amount      => @amount,
-    :description => 'Rails Stripe customer',
+    :description => 'KKA customer',
     :currency    => 'usd'
   )
 

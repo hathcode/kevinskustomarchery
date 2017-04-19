@@ -15,7 +15,8 @@
   <div class= "booyah-box-2  col-xs-12 col-md-10 col-md-offset-1">
     <h1><%= @bow.name %></h1><br />
     <p><%= @bow.description %></p><br />
-    <% if user_signed_in? %>
+    <p><strong>Love this bow? Want one like it? Press "Pay" to start your order! (Must be logged in)</strong></p>
+    <p><strong>Got questions? Contact me <a href="/contact">here.</a></strong></p>
       <% if @bow.price? %>
         <%= form_tag charges_path do %>
           <article>
@@ -28,14 +29,15 @@
               <span>Price: $<%= @bow.price %></span>
             </label>
           </article>
-
+        <% if user_signed_in? %>
           <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                   data-description="<%= @bow.name %>"
-                  data-price="<%= @bow.price %>"
+                  data-amount="10000"
                   data-locale="auto"></script>
         <% end %>
-      <% end %>
+        <% end %>
+        <h6 style="font-style: italic"><strong>By pressing "Pay", you agree to pay a non-refundable deposit of $100 to complete your order.</strong></h6>
     <% end %>
   <br/>
   <% @bow.photos.each do |photo| %>
