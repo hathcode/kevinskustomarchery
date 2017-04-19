@@ -1,6 +1,7 @@
 class ChargesController < ApplicationController
 
 def new
+  redirect_to bows_path
 end
 
 def create
