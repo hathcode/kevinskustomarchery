@@ -8,6 +8,9 @@ gem 'bootstrap-sass', '~>3.3.5.1'
 gem 'sprockets', '2.11.0'
 gem 'sass-rails'
 
+#turbolinks js fix
+gem 'jquery-turbolinks'
+
 #Keep secret keys secret
 gem 'figaro'
 #Use fog with carrierwave
